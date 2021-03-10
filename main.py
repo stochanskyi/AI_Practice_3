@@ -1,5 +1,4 @@
 from linear_model_generation import *
-
 import matplotlib.pyplot as plt
 
 print("b0 = " + str(learning_regression.intercept_))
@@ -11,7 +10,7 @@ for i in range(0, input_data.data.shape[1]):
             'b': input_data.target,
             'd': 0.05}
     plt.scatter('a', 'b', s='d', data=data)
-    plt.xlabel(i)
+    plt.xlabel("x" + str(i))
     plt.ylabel('y')
     plt.savefig("graph.png")
     plt.show()
