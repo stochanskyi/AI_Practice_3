@@ -1,5 +1,11 @@
-from linear_model_generation import *
 import matplotlib.pyplot as plt
+import sklearn.datasets as sl
+import sklearn.linear_model as lm
+
+input_data = sl.fetch_california_housing(as_frame=True)
+
+learning_regression = lm.LinearRegression()
+learning_regression.fit(input_data.data, input_data.target)
 
 print("b0 = " + str(learning_regression.intercept_))
 for i in range(0, learning_regression.coef_.size - 1):
